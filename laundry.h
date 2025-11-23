@@ -17,6 +17,7 @@ struct listP {
     addressP first, last;
 };
 
+void createListPakaian(listP Lp);
 addressP createElmPakaian(listP Lp, infotypePakaian x);
 void insertFirst_Pakaian(listP &Lp, addressP P);
 void insertLast_Pakaian(listP &Lp, addressP P);
