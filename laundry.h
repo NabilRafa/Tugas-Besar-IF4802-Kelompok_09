@@ -28,7 +28,7 @@ struct ListLaundry {
 };
 
 void createListPakaian(ListLaundry &LL);
-addressLaundry createElmPakaian(infotypePakaian x);
+addressLaundry createElmPakaian(string jenis, string layanan, string status);
 
 void insertFirst_Pakaian(ListLaundry &LL, addressLaundry P);
 void insertLast_Pakaian(ListLaundry &LL, addressLaundry P);
