@@ -3,53 +3,68 @@
 
 using namespace std;
 
-void createListPakaian(listP &Lp){
-  Lp.first = nullptr;
+void createListPakaian(ListLaundry &LL){
+    LL.first = nullptr;
+    LL.last = nullptr;
 }
 
-addressP createElmPakaian(infotypePakaian x){
-  addressP P;
+addressLaundry createElmPakaian(string jenis, string layanan, string status){
+    addressLaundry P;
 
-  P = new elmList_Pakaian;
-  P->info = x
-  P->next = nullptr;
-  P->prev = nullptr;
+    P = new elmList_Pakaian;
+    P->info.jenis = jenis;
+    P->info.layanan = layanan;
+    P->info.status = status;
+    P->next = nullptr;
+    P->prev = nullptr;
 
-  return p;
+    return P;
 }
 
-void insertFirst_Pakaian(listP &Lp, addressP P){
-  if (Lp.first == nullptr) {
-    Lp.first = P;
-    Lp.last = P;
+void insertFirst_Pakaian(ListLaundry &LL, addressLaundry P){
+    if (LL.first == nullptr) {
+        LL.first = P;
+        LL.last = P;
 
-  } else {
-    P->next = Lp.first;
-    Lp.first->prev = P;
-    Lp.first = P;
-}
-
-void insertLast_Pakaian(listP &Lp, addressP P){
-  if (Lp.first == nullptr) {
-    Lp.first = P;
-    Lp.last = P;
-  } else {
-    P->prev = Lp.last;
-    Lp.last->next = P;
-    Lp.last = P;
-  }
-}
-
-void insertAfter_Pakaian(listP &Lp, addressP prec, addressP P){
-  if (prec != nullptr) {
-    if (prec == Lp.last) {
-      insertLast_Pakaian(Lp, p);
     } else {
-      P->next = prec->next;
-      P->prev = prec;
-
-      prec->next->prev = P;
-      prec->next = P;
+        P->next = LL.first;
+        LL.first->prev = P;
+        LL.first = P;
     }
-  }
+}
+
+void insertLast_Pakaian(ListLaundry &LL, addressLaundry P){
+    if (LL.first == nullptr) {
+        LL.first = P;
+        LL.last = P;
+        P->prev = nullptr;
+        P->next = nullptr;
+
+    } else {
+        P->prev = LL.last;
+        LL.last->next = P;
+        LL.last = P;
+        LL.last->next = nullptr;
+    }
+}
+
+void insertAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry P){
+    if (LL.first == nullptr) {
+        cout << "List kosong" << endl;
+        return;
+
+    } else if (prec == nullptr) {
+        cout << "prec kosong" << endl;
+        return;
+
+    } else if (prec->next == nullptr){
+        insertLast_Pakaian(LL, P);
+
+    } else {
+        P->next = prec->next;
+        P->next->prev = P;
+        prec->next = P;
+        P->prev = prec;
+
+    }
 }

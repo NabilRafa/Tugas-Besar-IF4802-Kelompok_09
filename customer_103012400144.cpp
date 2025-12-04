@@ -11,11 +11,11 @@ addressCustomer createElmCustomer(string nama, string alamat, int noTelp){
     addressCustomer p;
 
     p = new elmList_Customer;
-    p->info.nama = nama
-    p->info.alamat = alamat
-    p->info.noTelp = noTelp
-    p->firstLaundry = nullptr
-    p->next = nullptr
+    p->info.nama = nama;
+    p->info.alamat = alamat;
+    p->info.noTelp = noTelp;
+    p->firstLaundry = nullptr;
+    p->next = nullptr;
 
     return p;
 }
@@ -25,7 +25,7 @@ void insertFirst_Customer(ListCustomer &LC, addressCustomer P){
         LC.first = P;
 
     } else {
-        p->next = LC.first;
+        P->next = LC.first;
         LC.first = P;
 
     }
@@ -51,12 +51,19 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
     addressCustomer q;
 
     if (LC.first == nullptr) {
-        LC.first = P;
+        cout << "List kosong" << endl;
+        return;
 
-    } else if (LC.first->next == nullptr){
-        LC.first->next = P;
+    } else if (prec == nullptr){
+        cout << "prec kosong" << endl;
+        return;
+
+    } else if (prec->next == nullptr) {
+        prec->next = P;
+        P->next = nullptr;
+
     } else {
-        p->next = prec->next;
+        P->next = prec->next;
         prec->next = P;
 
     }

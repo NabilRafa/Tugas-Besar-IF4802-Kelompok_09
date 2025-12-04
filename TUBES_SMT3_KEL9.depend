@@ -10,7 +10,7 @@
 	"customer.h"
 	<iostream>
 
-1764828568 d:\tugas\semester 3\struktur data\tubes smt 3\tubes_smt3_kel9\customer.h
+1764849315 d:\tugas\semester 3\struktur data\tubes smt 3\tubes_smt3_kel9\customer.h
 	"laundry.h"
 	<iostream>
 	<string>
@@ -20,7 +20,11 @@
 	<iostream>
 	<string>
 
-1763750188 source:d:\tugas\semester 3\struktur data\tubes smt 3\tubes_smt3_kel9\customer_103012400144.cpp
+1764851189 source:d:\tugas\semester 3\struktur data\tubes smt 3\tubes_smt3_kel9\customer_103012400144.cpp
 	"customer.h"
+	<iostream>
+
+1763750188 source:d:\tugas\semester 3\struktur data\tubes smt 3\tubes_smt3_kel9\laundry_103012400112.cpp
+	"laundry.h"
 	<iostream>
 

@@ -27,7 +27,7 @@ struct ListCustomer {
 };
 
 void createListCustomer(ListCustomer &LC);
-addressCustomer createElmCustomer(infotypeCustomer x);
+addressCustomer createElmCustomer(string nama, string alamat, int noTelp);
 
 void insertFirst_Customer(ListCustomer &LC, addressCustomer P);
 void insertLast_Customer(ListCustomer &LC, addressCustomer P);
