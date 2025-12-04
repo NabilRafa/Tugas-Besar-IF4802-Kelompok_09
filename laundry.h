@@ -1,29 +1,41 @@
-#ifndef LAUNDRY_103012400112_H_INCLUDED
-#define LAUNDRY_103012400112_H_INCLUDED
+#ifndef LAUNDRY_H_INCLUDED
+#define LAUNDRY_H_INCLUDED
+
+#include "customer.h"
+#include <iostream>
+#include <string>
 
 using namespace std;
 
+typedef struct elmList_Customer* addressCustomer;
+typedef struct elmList_Pakaian *addressLaundry;
+
 struct infotypePakaian {
-    string jenis, layanan, status;
+    string jenis;
+    string layanan;
+    string status;
 };
-typedef struct elmList_Pakaian *addressP;
 
 struct elmList_Pakaian {
     infotypePakaian info;
-    addressP next, prev;
+    addressLaundry next;
+    addressLaundry prev;
 };
 
-struct listP {
-    addressP first, last;
+struct ListLaundry {
+    addressLaundry first;
+    addressLaundry last;
 };
 
-void createListPakaian(listP &Lp);
-addressP createElmPakaian(infotypePakaian x);
-void insertFirst_Pakaian(listP &Lp, addressP P);
-void insertLast_Pakaian(listP &Lp, addressP P);
-void insertAfter_Pakaian(listP &Lp, addressP prec, addressP P);
-void deleteFirst_Pakaian(listP &Lp, addressP &P);
-void deleteLast_Pakaian(listP &Lp, addressP &P);
-void deleteAfter_Pakaian(listP &Lp, addressP prec, addressP &P);
+void createListPakaian(ListLaundry &LL);
+addressLaundry createElmPakaian(infotypePakaian x);
 
-#endif // LAUNDRY_103012400112_H_INCLUDED
+void insertFirst_Pakaian(ListLaundry &LL, addressLaundry P);
+void insertLast_Pakaian(ListLaundry &LL, addressLaundry P);
+void insertAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry P);
+
+void deleteFirst_Pakaian(ListLaundry &LL, addressLaundry &P);
+void deleteLast_Pakaian(ListLaundry &LL, addressLaundry &P);
+void deleteAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry &P);
+
+#endif // LAUNDRY_H_INCLUDED

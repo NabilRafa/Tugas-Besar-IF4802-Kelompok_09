@@ -22,7 +22,7 @@ void insertFirst_Pakaian(listP &Lp, addressP P){
   if (Lp.first == nullptr) {
     Lp.first = P;
     Lp.last = P;
-    
+
   } else {
     P->next = Lp.first;
     Lp.first->prev = P;

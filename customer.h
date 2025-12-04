@@ -1,32 +1,40 @@
-#ifndef CUSTOMER_103012400144_H_INCLUDED
-#define CUSTOMER_103012400144_H_INCLUDED
+#ifndef CUSTOMER_H_INCLUDED
+#define CUSTOMER_H_INCLUDED
+
+#include "laundry.h"
+#include <iostream>
+#include <string>
 
 using namespace std;
 
+typedef struct elmList_Customer* addressCustomer;
+typedef struct elmList_Pakaian *addressLaundry;
+
 struct infotypeCustomer {
-    string nama, alamat;
+    string nama;
+    string alamat;
     int noTelp;
 };
-typedef struct elmList_Customer *addressC;
 
 struct elmList_Customer {
     infotypeCustomer info;
-    addressC next;
+    addressCustomer next;
+    addressLaundry firstLaundry;
 };
 
-struct listC {
-    addressC first;
+struct ListCustomer {
+    addressCustomer first;
 };
 
-void createListCustomer(listC &Lc);
-addressC createElmCustomer(listC Lc, infotypeCustomer x);
-void insertFirst_Customer(listC &Lc, addressC P);
-void insertLast_Customer(listC &Lc, addressC P);
-void insertAfter_Customer(listC &Lc, addressC prec, addressC P);
-void deleteFirst_Customer(listC &Lc, addressC &P);
-void deleteLast_Customer(listC &Lc, addressC &P);
-void deleteAfter_Customer(listC &Lc, addressC prec, addressC &P);
+void createListCustomer(ListCustomer &LC);
+addressCustomer createElmCustomer(infotypeCustomer x);
 
+void insertFirst_Customer(ListCustomer &LC, addressCustomer P);
+void insertLast_Customer(ListCustomer &LC, addressCustomer P);
+void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustomer P);
 
+void deleteFirst_Customer(ListCustomer &LC, addressCustomer &P);
+void deleteLast_Customer(ListCustomer &LC, addressCustomer &P);
+void deleteAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustomer &P);
 
-#endif // CUSTOMER_103012400144_H_INCLUDED
+#endif // CUSTOMER_H_INCLUDED
