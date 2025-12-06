@@ -3,7 +3,6 @@
 
 #include "laundry.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -36,5 +35,8 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
 void deleteFirst_Customer(ListCustomer &LC, addressCustomer &P);
 void deleteLast_Customer(ListCustomer &LC, addressCustomer &P);
 void deleteAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustomer &P);
+
+addressCustomer search_Customer(ListCustomer LC, string nama);
+void show_Customer(ListCustomer &LC);
 
 #endif // CUSTOMER_H_INCLUDED

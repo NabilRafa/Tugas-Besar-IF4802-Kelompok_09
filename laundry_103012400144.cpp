@@ -3,11 +3,6 @@
 
 using namespace std;
 
-void createListPakaian(ListLaundry &LL){
-    LL.first = nullptr;
-    LL.last = nullptr;
-}
-
 addressLaundry createElmPakaian(string jenis, string layanan, string status){
     addressLaundry P;
 

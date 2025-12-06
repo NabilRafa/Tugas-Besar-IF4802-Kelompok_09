@@ -3,7 +3,6 @@
 
 #include "customer.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -22,12 +21,6 @@ struct elmList_Pakaian {
     addressLaundry prev;
 };
 
-struct ListLaundry {
-    addressLaundry first;
-    addressLaundry last;
-};
-
-void createListPakaian(ListLaundry &LL);
 addressLaundry createElmPakaian(string jenis, string layanan, string status);
 
 void insertFirst_Pakaian(ListLaundry &LL, addressLaundry P);
@@ -37,5 +30,8 @@ void insertAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry P)
 void deleteFirst_Pakaian(ListLaundry &LL, addressLaundry &P);
 void deleteLast_Pakaian(ListLaundry &LL, addressLaundry &P);
 void deleteAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry &P);
+
+addressLaundry search_Laundry(addressCustomer P, string nama);
+void show_Laundry(addressCustomer P);
 
 #endif // LAUNDRY_H_INCLUDED

@@ -52,11 +52,10 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
 
     if (LC.first == nullptr) {
         cout << "List kosong" << endl;
-        return;
-
+        P = nullptr;
     } else if (prec == nullptr){
         cout << "prec kosong" << endl;
-        return;
+        P = nullptr;
 
     } else if (prec->next == nullptr) {
         prec->next = P;
@@ -68,3 +67,4 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
 
     }
 }
+
