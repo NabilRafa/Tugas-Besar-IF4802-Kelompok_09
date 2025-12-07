@@ -1,3 +1,4 @@
+#include "customer.h"
 #include "laundry.h"
 #include <iostream>
 
@@ -16,50 +17,79 @@ addressLaundry createElmPakaian(string jenis, string layanan, string status){
     return P;
 }
 
-void insertFirst_Pakaian(ListLaundry &LL, addressLaundry P){
-    if (LL.first == nullptr) {
-        LL.first = P;
-        LL.last = P;
+bool isEmptyLaundry (addressCustomer P){
+    return P->firstLaundry == nullptr;
+}
+
+void insertFirst_Pakaian(addressCustomer &P, addressLaundry Q){
+
+    if (P == nullptr || Q == nullptr){
+        return;
+    }
+
+    if (isEmptyLaundry(P)){
+        P->firstLaundry = Q;
+
+    } else if (P->firstLaundry->next == nullptr) {
+        Q->prev = P->firstLaundry;
+        P->firstLaundry->next = Q;
 
     } else {
-        P->next = LL.first;
-        LL.first->prev = P;
-        LL.first = P;
+        insertLast_Pakaian(P, Q);
     }
 }
 
-void insertLast_Pakaian(ListLaundry &LL, addressLaundry P){
-    if (LL.first == nullptr) {
-        LL.first = P;
-        LL.last = P;
-        P->prev = nullptr;
-        P->next = nullptr;
 
-    } else {
-        P->prev = LL.last;
-        LL.last->next = P;
-        LL.last = P;
-        LL.last->next = nullptr;
+void insertLast_Pakaian(addressCustomer &P, addressLaundry Q){
+    addressLaundry temp = P->firstLaundry;
+
+    while (temp != nullptr) {
+        temp = temp->next;
     }
+
+    temp->next = Q;
+    Q->prev = temp;
+    Q->next = nullptr;
 }
 
-void insertAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry P){
-    if (LL.first == nullptr) {
-        cout << "List kosong" << endl;
-        return;
+void insertAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry Q){
 
-    } else if (prec == nullptr) {
-        cout << "prec kosong" << endl;
-        return;
+   Q->next = prec->next;
+   prec->next = Q;
+   Q->prev = prec;
 
-    } else if (prec->next == nullptr){
-        insertLast_Pakaian(LL, P);
+}
 
-    } else {
-        P->next = prec->next;
-        P->next->prev = P;
-        prec->next = P;
-        P->prev = prec;
+void show_Laundry(ListCustomer LC, string keyword){
+    addressCustomer p;
+    addressLaundry q;
 
+    p = LC.first;
+
+    while (p != nullptr || p->info.nama != keyword) {
+        p = p->next;
     }
+
+    if (p->info.nama == keyword) {
+
+        cout << "-----------------------------------------" << endl;
+        cout << "Nama Customer: " << p->info.nama << endl;
+        cout << "No Telp Customer: " << p->info.noTelp << endl;
+        cout << "Alamat Customer: " << p->info.alamat << endl;
+        cout << endl;
+
+        q = p->firstLaundry;
+        while (q != nullptr) {
+
+            cout << "-----------------------------------------" << endl;
+            cout << "Jenis Laundry: " << q->info.jenis<< endl;
+            cout << "Layanan Laundry: " << q->info.layanan<< endl;
+            cout << "Status Pengerjaan: " << q->info.status << endl;
+            cout << endl;
+            cout << endl;
+
+            q = q->next;
+        }
+    }
+
 }

@@ -6,8 +6,11 @@
 
 using namespace std;
 
-typedef struct elmList_Customer* addressCustomer;
-typedef struct elmList_Pakaian *addressLaundry;
+struct elmList_Pakaian;
+typedef elmList_Pakaian *addressLaundry;
+
+struct elmList_Customer;
+typedef elmList_Customer *addressCustomer;
 
 struct infotypePakaian {
     string jenis;
@@ -22,16 +25,18 @@ struct elmList_Pakaian {
 };
 
 addressLaundry createElmPakaian(string jenis, string layanan, string status);
+bool isEmptyLaundry (addressCustomer P);
 
-void insertFirst_Pakaian(ListLaundry &LL, addressLaundry P);
-void insertLast_Pakaian(ListLaundry &LL, addressLaundry P);
-void insertAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry P);
+void insertFirst_Pakaian(addressCustomer &P, addressLaundry Q);
+void insertLast_Pakaian(addressCustomer &P, addressLaundry Q);
+void insertAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry Q);
 
-void deleteFirst_Pakaian(ListLaundry &LL, addressLaundry &P);
-void deleteLast_Pakaian(ListLaundry &LL, addressLaundry &P);
-void deleteAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry &P);
+void deleteFirst_Pakaian(addressCustomer &P, addressLaundry &Q);
+void deleteLast_Pakaian(addressCustomer &P, addressLaundry &Q);
+void deleteAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry &Q);
 
 addressLaundry search_Laundry(addressCustomer P, string nama);
-void show_Laundry(addressCustomer P);
+void show_Laundry(addressCustomer P, string keyword);
 
+int countLaundry(addressCustomer P);
 #endif // LAUNDRY_H_INCLUDED

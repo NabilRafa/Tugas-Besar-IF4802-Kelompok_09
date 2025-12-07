@@ -40,6 +40,8 @@ void deleteAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
 
 addressCustomer search_Customer(ListCustomer LC, string nama) {
     addressCustomer found;
+    addressCustomer P;
+
     found = nullptr;
     if (LC.first == nullptr) {
         cout << "Data tidak ditemukan" << endl;

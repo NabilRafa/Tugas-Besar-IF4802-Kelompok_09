@@ -3,7 +3,9 @@
 
 using namespace std;
 
-void deleteFirst_Pakaian(ListLaundry &LL, addressLaundry &P) {
+void deleteFirst_Pakaian(addressCustomer &P, addressLaundry &Q) {
+
+
     if (LL.first == nullptr && LL.last == nullptr) {
         cout << "Tidak ada data yang bisa dihapus"
         P = nullptr;

@@ -1,3 +1,4 @@
+#include "laundry.h"
 #include "customer.h"
 #include <iostream>
 
@@ -5,6 +6,10 @@ using namespace std;
 
 void createListCustomer(ListCustomer &LC){
     LC.first = nullptr;
+}
+
+bool isEmptyCustomer (ListCustomer LC){
+    return LC.first == nullptr;
 }
 
 addressCustomer createElmCustomer(string nama, string alamat, int noTelp){
@@ -53,6 +58,7 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
     if (LC.first == nullptr) {
         cout << "List kosong" << endl;
         P = nullptr;
+
     } else if (prec == nullptr){
         cout << "prec kosong" << endl;
         P = nullptr;
@@ -68,3 +74,26 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
     }
 }
 
+void show_Customer(ListCustomer &LC) {
+    addressCustomer p;
+
+    p = LC.first;
+
+    cout << "=========================================" << endl;
+    cout << "       SISTEM LAUNDRY - LaundryYuk       " << endl;
+    cout << "=========================================" << endl;
+    cout << endl;
+    cout << "              DATA CUSTOMER              " << endl;
+
+    while (p != nullptr){
+
+        cout << "-----------------------------------------" << endl;
+        cout << "Nama Customer: " << p->info.nama << endl;
+        cout << "No Telp Customer: " << p->info.noTelp << endl;
+        cout << "Alamat Customer: " << p->info.nama << endl;
+        cout << "-----------------------------------------" << endl;
+        cout << endl;
+
+        p = p->next;
+    }
+}
