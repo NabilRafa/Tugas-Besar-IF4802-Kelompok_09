@@ -4,34 +4,69 @@
 using namespace std;
 
 void deleteFirst_Pakaian(addressCustomer &P, addressLaundry &Q) {
-
-
-    if (LL.first == nullptr && LL.last == nullptr) {
+    if (P->firstLaundry == nullptr) {
         cout << "Tidak ada data yang bisa dihapus"
-        P = nullptr;
+        Q = nullptr;
     } else {
-        P = LL.first;
-        LL.first = P->next;
-        P->next = nullptr;
+        Q = P->firstLaundry;
+        P->firstLaundry = Q->next;
+        Q->next = nullptr;
     }
 }
-void deleteLast_Pakaian(ListLaundry &LL, addressLaundry &P) {
-    if (LL.first == nullptr && LL.last == nullptr) {
+void deleteLast_Pakaian(addressCustomer &P, addressLaundry &Q) {
+    if (P->firstLaundry == nullptr) {
         cout << "Tidak ada data yang bisa dihapus"
         P = nullptr;
     } else {
-        P = LL.last;
-        LL.last = P->prev;
-        P->prev->next = nullptr;
+        addressLaundry R;
+        R = P->firstLaundry;
+        while (R != nullptr) {
+            R = R->next;
+        }
+        Q = R;
+        R->prev == nullptr;
+        R->next == nullptr;
     }
 }
-void deleteAfter_Pakaian(ListLaundry &LL, addressLaundry prec, addressLaundry &P) {
-    if (LL.first == nullptr && LL.last == nullptr || prec->next == nullptr) {
+void deleteAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry &Q) {
+    if (P->firstLaundry == nullptr || prec->next == nullptr) {
         cout << "Tidak ada data yang bisa dihapus"
         P = nullptr;
     } else {
-        P = prec->next;
-        prec->next = P->next;
-        P->next = nullptr;
+        Q = prec->next;
+        prec->next = Q->next;
+        Q->next->prev = prec;
+        Q->next = nullptr;
+        Q->prev == nullptr;
     }
+}
+
+addressLaundry search_Customer(addressCustomer P, string jenis) {
+    addressLaundry found;
+    found = nullptr;
+
+    if (P->firstLaundry == nullptr) {
+        cout << "Data tidak ditemukan" << endl;
+    } else {
+        addressLaundry Q;
+        Q = P->firstLaundry;
+        while (Q != nullptr) {
+            if (Q->info.jenis == jenis) {
+                found = Q;
+            }
+            Q = Q->next;
+        }
+    }
+    return found;
+}
+
+int countLaundry(addressCustomer P) {
+    addressLaundry Q = P->firstLaundry;
+    int total = 0;
+
+    while (Q != nullptr) {
+        total += 1;
+        Q = Q->next;
+    }
+    return total;
 }

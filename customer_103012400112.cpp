@@ -55,5 +55,16 @@ addressCustomer search_Customer(ListCustomer LC, string nama) {
             P = P->next;
         }
     }
-    return P;
+    return found;
+}
+
+int countCustomer (ListCustomer LC) {
+    int total = 0;
+    addressCustomer P = LC.first;
+
+    while (P != nullptr) {
+        total += 1;
+        P = P->next;
+    }
+    return total;
 }
