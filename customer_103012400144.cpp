@@ -1,5 +1,4 @@
-#include "laundry.h"
-#include "customer.h"
+#include "header.h"
 #include <iostream>
 
 using namespace std;
@@ -74,16 +73,11 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
     }
 }
 
-void show_Customer(ListCustomer &LC) {
+
+void show_AllCustomer(ListCustomer &LC){
     addressCustomer p;
 
     p = LC.first;
-
-    cout << "=========================================" << endl;
-    cout << "       SISTEM LAUNDRY - LaundryYuk       " << endl;
-    cout << "=========================================" << endl;
-    cout << endl;
-    cout << "              DATA CUSTOMER              " << endl;
 
     while (p != nullptr){
 
@@ -95,5 +89,19 @@ void show_Customer(ListCustomer &LC) {
         cout << endl;
 
         p = p->next;
+    }
+}
+
+void show_Customer(addressCustomer P) {
+    while (P != nullptr){
+
+        cout << "-----------------------------------------" << endl;
+        cout << "Nama Customer: " << P->info.nama << endl;
+        cout << "No Telp Customer: " << P->info.noTelp << endl;
+        cout << "Alamat Customer: " << P->info.nama << endl;
+        cout << "-----------------------------------------" << endl;
+        cout << endl;
+
+        P = P->next;
     }
 }

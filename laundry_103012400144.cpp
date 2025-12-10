@@ -1,16 +1,16 @@
-#include "customer.h"
-#include "laundry.h"
+#include "header.h"
 #include <iostream>
 
 using namespace std;
 
-addressLaundry createElmPakaian(string jenis, string layanan, string status){
+addressLaundry createElmPakaian(string jenis, string layanan, string status, int beratPakaian){
     addressLaundry P;
 
     P = new elmList_Pakaian;
     P->info.jenis = jenis;
     P->info.layanan = layanan;
     P->info.status = status;
+    P->info.beratPakaian = beratPakaian;
     P->next = nullptr;
     P->prev = nullptr;
 
@@ -85,7 +85,7 @@ void show_Laundry(ListCustomer LC, string keyword){
             cout << "Jenis Laundry: " << q->info.jenis<< endl;
             cout << "Layanan Laundry: " << q->info.layanan<< endl;
             cout << "Status Pengerjaan: " << q->info.status << endl;
-            cout << endl;
+            cout << "Berat Pakaian: " << q->info.beratPakaian << endl;
             cout << endl;
 
             q = q->next;

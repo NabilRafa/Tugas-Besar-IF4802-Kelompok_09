@@ -1,4 +1,4 @@
-#include "customer.h"
+#include "header.h"
 #include <iostream>
 
 using namespace std;
@@ -62,9 +62,13 @@ int countCustomer (ListCustomer LC) {
     int total = 0;
     addressCustomer P = LC.first;
 
-    while (P != nullptr) {
-        total += 1;
-        P = P->next;
+    if (P == nullptr) {
+        cout << "List kosong";
+    } else {
+        while (P != nullptr) {
+            total += 1;
+            P = P->next;
+        }
     }
     return total;
 }

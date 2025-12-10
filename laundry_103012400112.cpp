@@ -1,11 +1,11 @@
-#include "laundry.h"
+#include "header.h"
 #include <iostream>
 
 using namespace std;
 
 void deleteFirst_Pakaian(addressCustomer &P, addressLaundry &Q) {
     if (P->firstLaundry == nullptr) {
-        cout << "Tidak ada data yang bisa dihapus"
+        cout << "Tidak ada data yang bisa dihapus";
         Q = nullptr;
     } else {
         Q = P->firstLaundry;
@@ -15,7 +15,7 @@ void deleteFirst_Pakaian(addressCustomer &P, addressLaundry &Q) {
 }
 void deleteLast_Pakaian(addressCustomer &P, addressLaundry &Q) {
     if (P->firstLaundry == nullptr) {
-        cout << "Tidak ada data yang bisa dihapus"
+        cout << "Tidak ada data yang bisa dihapus";
         P = nullptr;
     } else {
         addressLaundry R;
@@ -30,7 +30,7 @@ void deleteLast_Pakaian(addressCustomer &P, addressLaundry &Q) {
 }
 void deleteAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry &Q) {
     if (P->firstLaundry == nullptr || prec->next == nullptr) {
-        cout << "Tidak ada data yang bisa dihapus"
+        cout << "Tidak ada data yang bisa dihapus";
         P = nullptr;
     } else {
         Q = prec->next;
