@@ -32,10 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="customer.h" />
 		<Unit filename="customer_103012400112.cpp" />
 		<Unit filename="customer_103012400144.cpp" />
-		<Unit filename="laundry.h" />
+		<Unit filename="header.h" />
 		<Unit filename="laundry_103012400112.cpp" />
 		<Unit filename="laundry_103012400144.cpp" />
 		<Unit filename="main.cpp" />

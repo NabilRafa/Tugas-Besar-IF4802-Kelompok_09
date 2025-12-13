@@ -80,11 +80,10 @@ void show_AllCustomer(ListCustomer &LC){
     p = LC.first;
 
     while (p != nullptr){
-
         cout << "-----------------------------------------" << endl;
         cout << "Nama Customer: " << p->info.nama << endl;
         cout << "No Telp Customer: " << p->info.noTelp << endl;
-        cout << "Alamat Customer: " << p->info.nama << endl;
+        cout << "Alamat Customer: " << p->info.alamat << endl;
         cout << "-----------------------------------------" << endl;
         cout << endl;
 
@@ -92,16 +91,13 @@ void show_AllCustomer(ListCustomer &LC){
     }
 }
 
-void show_Customer(addressCustomer P) {
-    while (P != nullptr){
-
+void show_Customer(addressCustomer &P) {
+    if (P != nullptr){
         cout << "-----------------------------------------" << endl;
         cout << "Nama Customer: " << P->info.nama << endl;
         cout << "No Telp Customer: " << P->info.noTelp << endl;
-        cout << "Alamat Customer: " << P->info.nama << endl;
+        cout << "Alamat Customer: " << P->info.alamat << endl;
         cout << "-----------------------------------------" << endl;
         cout << endl;
-
-        P = P->next;
     }
 }

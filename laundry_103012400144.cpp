@@ -3,13 +3,12 @@
 
 using namespace std;
 
-addressLaundry createElmPakaian(string jenis, string layanan, string status, int beratPakaian){
+addressLaundry createElmPakaian(string jenis, string layanan, int beratPakaian){
     addressLaundry P;
 
     P = new elmList_Pakaian;
     P->info.jenis = jenis;
     P->info.layanan = layanan;
-    P->info.status = status;
     P->info.beratPakaian = beratPakaian;
     P->next = nullptr;
     P->prev = nullptr;
@@ -60,36 +59,26 @@ void insertAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry
 
 }
 
-void show_Laundry(ListCustomer LC, string keyword){
-    addressCustomer p;
-    addressLaundry q;
+void show_AllLaundry(addressCustomer P){
+    addressLaundry Q = P->firstLaundry;
 
-    p = LC.first;
-
-    while (p != nullptr || p->info.nama != keyword) {
-        p = p->next;
-    }
-
-    if (p->info.nama == keyword) {
-
+    while (Q != nullptr){
         cout << "-----------------------------------------" << endl;
-        cout << "Nama Customer: " << p->info.nama << endl;
-        cout << "No Telp Customer: " << p->info.noTelp << endl;
-        cout << "Alamat Customer: " << p->info.alamat << endl;
+        cout << "Jenis Laundry: " << Q->info.jenis<< endl;
+        cout << "Layanan Laundry: " << Q->info.layanan<< endl;
+        cout << "Berat Pakaian: " << Q->info.beratPakaian << endl;
         cout << endl;
 
-        q = p->firstLaundry;
-        while (q != nullptr) {
-
-            cout << "-----------------------------------------" << endl;
-            cout << "Jenis Laundry: " << q->info.jenis<< endl;
-            cout << "Layanan Laundry: " << q->info.layanan<< endl;
-            cout << "Status Pengerjaan: " << q->info.status << endl;
-            cout << "Berat Pakaian: " << q->info.beratPakaian << endl;
-            cout << endl;
-
-            q = q->next;
-        }
+        Q = Q->next;
     }
+}
 
+void show_Laundry(addressLaundry P){
+    if (P != nullptr) {
+        cout << "-----------------------------------------" << endl;
+        cout << "Jenis Laundry: " << P->info.jenis<< endl;
+        cout << "Layanan Laundry: " << P->info.layanan<< endl;
+        cout << "Berat Pakaian: " << P->info.beratPakaian << endl;
+        cout << endl;
+    }
 }

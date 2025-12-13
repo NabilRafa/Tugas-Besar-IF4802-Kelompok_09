@@ -44,7 +44,7 @@ addressCustomer search_Customer(ListCustomer LC, string nama) {
 
     found = nullptr;
     if (LC.first == nullptr) {
-        cout << "Data tidak ditemukan" << endl;
+        cout << "Data Customer tidak ada" << endl;
     } else {
         addressCustomer P;
         P = LC.first;

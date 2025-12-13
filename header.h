@@ -4,14 +4,11 @@
 #include <iostream>
 
 using namespace std;
-
-
 //Customer
-struct elmList_Customer;
-typedef elmList_Customer *addressCustomer;
 
-struct elmList_Pakaian;
-typedef elmList_Pakaian *addressLaundry;
+typedef struct elmList_Customer *addressCustomer;
+
+typedef struct elmList_Pakaian *addressLaundry;
 
 struct infotypeCustomer {
     string nama;
@@ -33,7 +30,6 @@ struct ListCustomer {
 struct infotypePakaian {
     string jenis;
     string layanan;
-    string status;
     int beratPakaian;
 };
 
@@ -56,12 +52,12 @@ void deleteLast_Customer(ListCustomer &LC, addressCustomer &P);
 void deleteAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustomer &P);
 
 addressCustomer search_Customer(ListCustomer LC, string nama);
-void show_Customer(ListCustomer &LC);
-
+void show_Customer(addressCustomer &P);
+void show_AllCustomer(ListCustomer &LC);
 int countCustomer (ListCustomer LC);
 
 //Pakaian
-addressLaundry createElmPakaian(string jenis, string layanan, string status);
+addressLaundry createElmPakaian(string jenis, string layanan, int beratPakaian);
 bool isEmptyLaundry (addressCustomer P);
 
 void insertFirst_Pakaian(addressCustomer &P, addressLaundry Q);
@@ -72,8 +68,32 @@ void deleteFirst_Pakaian(addressCustomer &P, addressLaundry &Q);
 void deleteLast_Pakaian(addressCustomer &P, addressLaundry &Q);
 void deleteAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry &Q);
 
-addressLaundry search_Laundry(addressCustomer P, string nama);
-void show_Laundry(addressCustomer P, string keyword);
-
+addressLaundry search_LaundryJenis(addressCustomer P, string jenis);
+void show_Laundry(addressLaundry P);
 int countLaundry(addressCustomer P);
+int countBeratLaundry(addressCustomer P);
+int countHargaLaundry(addressCustomer P);
+
+//main_admin.cpp
+void menu_customer();
+void menu_laundry();
+
+//main_user,cpp
+void menu_addCustomer(ListCustomer &LC);
+void menu_deleteCustomer(ListCustomer &LC);
+void menu_addLaundry(ListCustomer &LC);
+void menu_deleteLaundry(ListCustomer &LC);
+void menu_countCustomer(ListCustomer LC);
+void menu_countLaundry(ListCustomer LC);
+void menu_countHargaLaundry(ListCustomer LC);
+void menu_searchCustomer(ListCustomer LC);
+void menu_searchLaundry(ListCustomer LC);
+void menu_showAllData(ListCustomer LC);
+void menu_showCustomer(ListCustomer LC);
+void menu_showLaundry(ListCustomer LC);
+
+//main.cpp
+void menu_admin();
+void menu_user();
+
 #endif // HEADER_H_INCLUDED
