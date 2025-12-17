@@ -10,7 +10,7 @@ int main () {
         cout << "=========================================================================" << endl;
         cout << "||               SELAMAT DATANG DI APLIKASI  TEL-U LAUNDRY             ||" << endl;
         cout << "=========================================================================" << endl;
-        cout << "Login sebagai : " << endl;
+        cout << "Lanjutkan sebagai : " << endl;
         cout << "1. Admin" << endl;
         cout << "2. User" << endl;
         cout << "0. Exit" << endl;

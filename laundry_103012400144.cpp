@@ -9,6 +9,7 @@ addressLaundry createElmPakaian(string jenis, string layanan, int beratPakaian){
     P = new elmList_Pakaian;
     P->info.jenis = jenis;
     P->info.beratPakaian = beratPakaian;
+    P->info.layanan = layanan;
     P->next = nullptr;
     P->prev = nullptr;
 
@@ -80,6 +81,7 @@ void show_AllLaundry(addressCustomer P){
         cout << "Jenis Laundry: " << Q->info.jenis<< endl;
         cout << "Layanan Laundry: " << Q->info.layanan<< endl;
         cout << "Berat Pakaian: " << Q->info.beratPakaian << endl;
+        cout << "-----------------------------------------" << endl;
         cout << endl;
 
         Q = Q->next;
@@ -88,10 +90,13 @@ void show_AllLaundry(addressCustomer P){
 
 void show_Laundry(addressLaundry P){
     if (P != nullptr) {
-        cout << "-----------------------------------------" << endl;
-        cout << "Jenis Laundry: " << P->info.jenis<< endl;
+        cout << "Jenis Laundry: " << P->info.jenis << endl;
         cout << "Layanan Laundry: " << P->info.layanan<< endl;
         cout << "Berat Pakaian: " << P->info.beratPakaian << endl;
         cout << endl;
+        if (P->next == nullptr) {
+            cout << "-----------------------------------------" << endl;
+        }
+
     }
 }

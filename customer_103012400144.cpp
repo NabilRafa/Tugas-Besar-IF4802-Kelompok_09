@@ -29,11 +29,9 @@ void insertFirst_Customer(ListCustomer &LC, addressCustomer P){
     if (LC.first == nullptr) {
         LC.first = P;
         P->next = nullptr;
-
     } else {
         P->next = LC.first;
         LC.first = P;
-
     }
 }
 
@@ -43,7 +41,6 @@ void insertLast_Customer(ListCustomer &LC, addressCustomer P){
     if (LC.first == nullptr) {
         LC.first = P;
         P->next = nullptr;
-
     } else {
         q = LC.first;
 
@@ -59,7 +56,6 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
     if (LC.first == nullptr) {
         cout << "List kosong" << endl;
         P = nullptr;
-
     } else if (prec == nullptr){
         cout << "prec kosong" << endl;
         P = nullptr;
@@ -67,39 +63,34 @@ void insertAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustome
     } else if (prec->next == nullptr) {
         prec->next = P;
         P->next = nullptr;
-
     } else {
         P->next = prec->next;
         prec->next = P;
-
     }
 }
 
 
 void show_AllCustomer(ListCustomer &LC){
-    addressCustomer p;
+    addressCustomer P = LC.first;
 
-    p = LC.first;
-
-    while (p != nullptr){
+    while (P != nullptr){
         cout << "-----------------------------------------" << endl;
-        cout << "Nama Customer: " << p->info.nama << endl;
-        cout << "No Telp Customer: " << p->info.noTelp << endl;
-        cout << "Alamat Customer: " << p->info.alamat << endl;
+        cout << "ID Customer: " << P->info.idCustomer << endl;
+        cout << "Nama Customer: " << P->info.nama << endl;
+        cout << "No Telp Customer: " << P->info.noTelp << endl;
+        cout << "Alamat Customer: " << P->info.alamat << endl;
         cout << "-----------------------------------------" << endl;
-        cout << endl;
-
-        p = p->next;
+        P = P->next;
     }
 }
 
 void show_Customer(addressCustomer &P) {
     if (P != nullptr){
         cout << "-----------------------------------------" << endl;
+        cout << "ID Customer: " << P->info.idCustomer << endl;
         cout << "Nama Customer: " << P->info.nama << endl;
         cout << "No Telp Customer: " << P->info.noTelp << endl;
         cout << "Alamat Customer: " << P->info.alamat << endl;
-        cout << "-----------------------------------------" << endl;
         cout << endl;
     }
 }

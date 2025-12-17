@@ -99,8 +99,10 @@ void menu_countHargaLaundry(ListCustomer LC);
 void menu_searchCustomer(ListCustomer LC);
 void menu_searchLaundry(ListCustomer LC);
 void menu_showAllData(ListCustomer LC);
+void menu_urutkanLaundry(ListCustomer &LC);
 void menu_showCustomer(ListCustomer LC);
 void menu_showLaundry(ListCustomer LC);
+void menu_showCustomerLaundry(ListCustomer LC);
 
 
 //main.cpp
