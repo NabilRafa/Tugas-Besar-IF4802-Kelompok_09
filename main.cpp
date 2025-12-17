@@ -3,8 +3,8 @@
 
 using namespace std;
 
-int main ()
-{
+int main () {
+
     int pilihan = -99;
     while (pilihan != 0) {
         cout << "=========================================================================" << endl;

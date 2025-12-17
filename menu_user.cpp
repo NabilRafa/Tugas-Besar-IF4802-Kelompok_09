@@ -88,17 +88,19 @@ void menu_user(){
 }
 
 void menu_addCustomer(ListCustomer &LC){
-    string nama, alamat;
-    int noTelp;
+    string nama, alamat, idCustomer, noTelp;
     addressCustomer P;
+
     cout << "Silahkan Input Data Customer : " << endl;
     cout << "Nama : ";
     cin >> nama;
     cout << "Alamat : ";
     cin >> alamat;
+    cout << "ID Customer : ";
+    cin >> idCustomer;
     cout << "Nomor Telepon : ";
     cin >> noTelp;
-    P = createElmCustomer(nama, alamat, noTelp);
+    P = createElmCustomer(nama, alamat, idCustomer, noTelp);
     insertLast_Customer(LC, P);
     cout << "Data Customer telah ditambahkan" << endl;
 }
@@ -135,7 +137,7 @@ void menu_deleteCustomer(ListCustomer &LC){
 
 void menu_addLaundry(ListCustomer &LC) {
     addressCustomer P;
-    string jenis, layanan, nama;
+    string jenis, warna, layanan, nama;
     int beratPakaian;
     addressLaundry Q;
 
@@ -149,6 +151,8 @@ void menu_addLaundry(ListCustomer &LC) {
         cout << "Jenis : ";
         cin >> jenis;
         cout << endl;
+        cout << "Warna : ";
+        cin >> warna;
         cout << "Silahkan pilih Layanan : (Contoh : Paket A)" << endl;
         cout << "1. Paket A (Cuci Jemur)" << endl;
         cout << "2. Paket B (Cuci Jemur Setrika)" << endl;

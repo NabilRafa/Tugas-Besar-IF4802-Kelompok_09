@@ -8,7 +8,6 @@ addressLaundry createElmPakaian(string jenis, string layanan, int beratPakaian){
 
     P = new elmList_Pakaian;
     P->info.jenis = jenis;
-    P->info.layanan = layanan;
     P->info.beratPakaian = beratPakaian;
     P->next = nullptr;
     P->prev = nullptr;
@@ -26,29 +25,43 @@ void insertFirst_Pakaian(addressCustomer &P, addressLaundry Q){
         return;
     }
 
-    if (isEmptyLaundry(P)){
+    if (P->firstLaundry == nullptr){
+        Q->prev = nullptr;
+        Q->next = nullptr;
         P->firstLaundry = Q;
 
-    } else if (P->firstLaundry->next == nullptr) {
-        Q->prev = P->firstLaundry;
-        P->firstLaundry->next = Q;
-
     } else {
-        insertLast_Pakaian(P, Q);
+        Q->next = P->firstLaundry;
+        Q->prev = nullptr;
+        P->firstLaundry->next = nullptr;
+        P->firstLaundry = Q;
     }
 }
 
 
 void insertLast_Pakaian(addressCustomer &P, addressLaundry Q){
-    addressLaundry temp = P->firstLaundry;
+    addressLaundry Search;
 
-    while (temp != nullptr) {
-        temp = temp->next;
+    if (P == nullptr || Q == nullptr){
+        return;
     }
 
-    temp->next = Q;
-    Q->prev = temp;
-    Q->next = nullptr;
+    if (P->firstLaundry == nullptr){
+        P->firstLaundry = Q;
+        Q->prev = nullptr;
+        Q->next = nullptr;
+
+    } else {
+        Search = P->firstLaundry;
+
+        while (Search->next != nullptr){
+            Search = Search->next;
+        }
+
+        Search->next = Q;
+        Q->prev = Search;
+        Q->next = nullptr;
+    }
 }
 
 void insertAfter_Pakaian(addressCustomer &P, addressLaundry prec, addressLaundry Q){

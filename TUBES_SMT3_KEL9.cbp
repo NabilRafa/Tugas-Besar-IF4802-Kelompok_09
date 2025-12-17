@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="customer_103012400112.cpp" />
 		<Unit filename="customer_103012400144.cpp" />
+		<Unit filename="demo.cpp" />
 		<Unit filename="header.h" />
 		<Unit filename="laundry_103012400112.cpp" />
 		<Unit filename="laundry_103012400144.cpp" />

@@ -4,8 +4,8 @@
 #include <iostream>
 
 using namespace std;
-//Customer
 
+//Customer
 typedef struct elmList_Customer *addressCustomer;
 
 typedef struct elmList_Pakaian *addressLaundry;
@@ -13,7 +13,8 @@ typedef struct elmList_Pakaian *addressLaundry;
 struct infotypeCustomer {
     string nama;
     string alamat;
-    int noTelp;
+    string idCustomer;
+    string noTelp;
 };
 
 struct elmList_Customer {
@@ -39,9 +40,12 @@ struct elmList_Pakaian {
     addressLaundry prev;
 };
 
+//Basic Function & Procedure Customer
 void createListCustomer(ListCustomer &LC);
-addressCustomer createElmCustomer(string nama, string alamat, int noTelp);
+addressCustomer createElmCustomer(string nama, string alamat, string idCustomer, string noTelp);
 bool isEmptyCustomer (ListCustomer LC);
+
+void inisialisasi_data(ListCustomer &LC);
 
 void insertFirst_Customer(ListCustomer &LC, addressCustomer P);
 void insertLast_Customer(ListCustomer &LC, addressCustomer P);
@@ -51,12 +55,16 @@ void deleteFirst_Customer(ListCustomer &LC, addressCustomer &P);
 void deleteLast_Customer(ListCustomer &LC, addressCustomer &P);
 void deleteAfter_Customer(ListCustomer &LC, addressCustomer prec, addressCustomer &P);
 
-addressCustomer search_Customer(ListCustomer LC, string nama);
+void deleteCustomer(ListCustomer &LC, addressCustomer &P);
+
+addressCustomer search_Customer(ListCustomer LC, string keyword);
+
 void show_Customer(addressCustomer &P);
 void show_AllCustomer(ListCustomer &LC);
 int countCustomer (ListCustomer LC);
 
-//Pakaian
+
+//Basic Function & Procedure Pakaian
 addressLaundry createElmPakaian(string jenis, string layanan, int beratPakaian);
 bool isEmptyLaundry (addressCustomer P);
 
@@ -74,9 +82,11 @@ int countLaundry(addressCustomer P);
 int countBeratLaundry(addressCustomer P);
 int countHargaLaundry(addressCustomer P);
 
+
 //main_admin.cpp
 void menu_customer();
 void menu_laundry();
+
 
 //main_user,cpp
 void menu_addCustomer(ListCustomer &LC);
@@ -91,6 +101,7 @@ void menu_searchLaundry(ListCustomer LC);
 void menu_showAllData(ListCustomer LC);
 void menu_showCustomer(ListCustomer LC);
 void menu_showLaundry(ListCustomer LC);
+
 
 //main.cpp
 void menu_admin();
