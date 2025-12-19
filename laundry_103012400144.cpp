@@ -34,7 +34,6 @@ void insertFirst_Pakaian(addressCustomer &P, addressLaundry Q){
     } else {
         Q->next = P->firstLaundry;
         Q->prev = nullptr;
-        P->firstLaundry->next = nullptr;
         P->firstLaundry = Q;
     }
 }
