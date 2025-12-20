@@ -239,20 +239,20 @@ void menu_addFirstLaundry(ListCustomer &LC){
     cout << endl;
 
     cout << "Pilih Layanan Laundry : " << endl;
-    cout << "1. Paket A" << endl;
-    cout << "2. Paket B" << endl;
-    cout << "3. Lainnya" << endl;
+    cout << "1. Paket A (Cuci Jemur)" << endl;
+    cout << "2. Paket B (Cuci Jemur Setrika)" << endl;
+    cout << "3. Paket C (Setrika)" << endl;
     cout << "=========================================================================" << endl;
     cout << "Pilih : ";
     cin >> pilihanLayanan;
     cout << endl;
 
         if (pilihanLayanan == 1) {
-            layanan = "Paket A";
+            layanan = "Paket_A";
         } else if (pilihanLayanan == 2) {
-            layanan = "Paket B";
+            layanan = "Paket_B";
         } else if (pilihanLayanan == 3){
-            layanan = "Lainnya";
+            layanan = "Paket_C";
         } else {
             cout << "Input tidak valid silahkan coba lagi" << endl;
             return;
@@ -279,20 +279,20 @@ void menu_addLastLaundry(ListCustomer &LC){
     cout << endl;
 
     cout << "Pilih Layanan Laundry : " << endl;
-    cout << "1. Paket A" << endl;
-    cout << "2. Paket B" << endl;
-    cout << "3. Lainnya" << endl;
+    cout << "1. Paket A (Cuci Jemur)" << endl;
+    cout << "2. Paket B (Cuci Jemur Setrika)" << endl;
+    cout << "3. Paket C (Setrika)" << endl;
     cout << "=========================================================================" << endl;
     cout << "Pilih : ";
     cin >> pilihanLayanan;
     cout << endl;
 
         if (pilihanLayanan == 1) {
-            layanan = "Paket A";
+            layanan = "Paket_A";
         } else if (pilihanLayanan == 2) {
-            layanan = "Paket B";
+            layanan = "Paket_B";
         } else if (pilihanLayanan == 3){
-            layanan = "Lainnya";
+            layanan = "Paket_C";
         } else {
             cout << "Input tidak valid silahkan coba lagi" << endl;
             return;

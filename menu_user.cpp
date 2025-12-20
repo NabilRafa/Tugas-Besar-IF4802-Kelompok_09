@@ -346,6 +346,15 @@ void menu_urutkanLaundry(ListCustomer &LC) {
                         minNode->info = temp;
                     }
                 }
+                show_Customer(P);
+
+                if (P != nullptr) {
+                    addressLaundry Q = P->firstLaundry;
+                    while (Q != nullptr) {
+                        show_Laundry(Q);
+                        Q = Q->next;
+                    }
+                }
                 break;
             case 2: // DESCENDING
                 addressLaundry maxNode;
@@ -361,6 +370,15 @@ void menu_urutkanLaundry(ListCustomer &LC) {
                         temp = i->info;
                         i->info = maxNode->info;
                         maxNode->info = temp;
+                    }
+                }
+                show_Customer(P);
+
+                if (P != nullptr) {
+                    addressLaundry Q = P->firstLaundry;
+                    while (Q != nullptr) {
+                        show_Laundry(Q);
+                        Q = Q->next;
                     }
                 }
                 break;

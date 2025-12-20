@@ -18,7 +18,7 @@ int main () {
         cout << "2. User" << endl;
         cout << "3. Inisialisasi 10 Data" << endl;
         cout << "4. Inisialisasi 25 Data" << endl;
-        cout << "5. Inisialisasi Seluruh Data (50 Data)" << endl;
+        cout << "5. Inisialisasi 50 Data" << endl;
         cout << "0. Exit" << endl;
         cout << "=========================================================================" << endl;
         cout << "Pilih : ";
