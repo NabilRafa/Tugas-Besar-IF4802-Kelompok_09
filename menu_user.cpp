@@ -3,83 +3,91 @@
 
 using namespace std;
 
-int pilihUser;
 bool keluar = false;
-ListCustomer LC;
 addressCustomer P;
 
-void menu_user(){
-    while (!keluar) {
+void menu_user(ListCustomer &LC){
+    int pilihanUSER = 404;
+
+    while (pilihanUSER != 0) {
         cout << "=========================================================================" << endl;
         cout << "||                                 MENU                                ||" << endl;
         cout << "=========================================================================" << endl;
         cout << "Pilih fitur : " << endl;
-        cout << "1. Inisialisasi seluruh Data" << endl;
-        cout << "2. Tambah Data Customer setelah Nama tertentu" << endl;
-        cout << "3. Hapus Data Customer berdasarkan Nama" << endl;
-        cout << "4. Tambah Data Laundry setelah Jenis tertentu" << endl;
-        cout << "5. Hapus Data Laundry Customer berdasarkan Jenis" << endl;
-        cout << "6. Hitung Jumlah Customer" << endl;
-        cout << "7. Hitung Jumlah Laundry per Customer" << endl;
-        cout << "8. Hitung total Harga laundry per customer" << endl;
-        cout << "9. Cari Data Customer berdasarkan Nama" << endl;
-        cout << "10. Cari Data Laundry berdasarkan Jenis" << endl;
-        cout << "11. Urutkan Data Pakaian Laundry berdasarkan Berat Pakaian" << endl;
-        cout << "12. Tampilkan Data Customer" << endl;
-        cout << "13. Tampilkan Data Laundry berdasarkan Layanan" << endl;
-        cout << "14. Tampilkan Data Laundry berdasarkan Nama Customer" << endl;
+        cout << "1. Tambah Data Customer setelah Nama tertentu" << endl;
+        cout << "2. Hapus Data Customer berdasarkan Nama" << endl;
+        cout << "3. Tambah Data Laundry setelah Jenis tertentu" << endl;
+        cout << "4. Hapus Data Laundry Customer berdasarkan Jenis" << endl;
+        cout << "5. Hitung Jumlah Customer" << endl;
+        cout << "6. Hitung Jumlah Laundry per Customer" << endl;
+        cout << "7. Hitung total Harga laundry per customer" << endl;
+        cout << "8. Cari Data Customer berdasarkan Nama" << endl;
+        cout << "9. Cari Data Laundry berdasarkan Jenis" << endl;
+        cout << "10. Urutkan Data Pakaian Laundry berdasarkan Berat Pakaian" << endl;
+        cout << "11. Tampilkan Data Customer" << endl;
+        cout << "12. Tampilkan Data Laundry berdasarkan Layanan" << endl;
+        cout << "13. Tampilkan Data Laundry berdasarkan Nama Customer" << endl;
         cout << "0. Exit" << endl;
         cout << "=========================================================================" << endl;
         cout << "Pilih : ";
-        cin >> pilihUser;
+        cin >> pilihanUSER;
         cout << endl;
 
-        switch(pilihUser) {
-        case 1 :
-            createListCustomer(LC);
-            inisialisasi_data(LC);
-            break;
-        case 2:
+        switch(pilihanUSER) {
+
+        case 1:
             menu_addCustomer(LC);
+            cout << endl;
+            break;
+        case 2 :
+            menu_deleteCustomer(LC);
+            cout << endl;
             break;
         case 3 :
-            menu_deleteCustomer(LC);
+            menu_addLaundry(LC);
+            cout << endl;
             break;
         case 4 :
-            menu_addLaundry(LC);
+            menu_deleteLaundry(LC);
+            cout << endl;
             break;
         case 5 :
-            menu_deleteLaundry(LC);
+            menu_countCustomer(LC);
+            cout << endl;
             break;
         case 6 :
-            menu_countCustomer(LC);
+            menu_countLaundry(LC);
+            cout << endl;
             break;
         case 7 :
-            menu_countLaundry(LC);
+            menu_countHargaLaundry(LC);
+            cout << endl;
             break;
         case 8 :
-            menu_countHargaLaundry(LC);
+            menu_searchCustomer(LC);
+            cout << endl;
             break;
         case 9 :
-            menu_searchCustomer(LC);
+            menu_searchLaundry(LC);
+            cout << endl;
             break;
         case 10 :
-            menu_searchLaundry(LC);
+            menu_urutkanLaundry(LC);
+            cout << endl;
             break;
         case 11 :
-            menu_urutkanLaundry(LC);
+            menu_showCustomer(LC);
+            cout << endl;
             break;
         case 12 :
-            menu_showCustomer(LC);
+            menu_showLaundry(LC);
+            cout << endl;
             break;
         case 13 :
-            menu_showLaundry(LC);
-            break;
-        case 14 :
             menu_showCustomerLaundry(LC);
+            cout << endl;
             break;
-        case 0 :
-            keluar = true;
+        case 0:
             break;
         default:
             cout << "Fitur tidak tersedia, silahkan pilih fitur kembali!" << endl;

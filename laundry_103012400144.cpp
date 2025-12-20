@@ -99,3 +99,17 @@ void show_Laundry(addressLaundry P){
 
     }
 }
+
+void deleteFirst_Pakaian(addressCustomer &P) {
+    addressLaundry Q;
+
+    if (P->firstLaundry == nullptr) {
+        cout << "Tidak ada data yang bisa dihapus";
+        Q = nullptr;
+    } else {
+        Q = P->firstLaundry;
+        P->firstLaundry = Q->next;
+        Q->next = nullptr;
+        delete Q;
+    }
+}

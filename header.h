@@ -27,6 +27,7 @@ struct ListCustomer {
     addressCustomer first;
 };
 
+
 //Pakaian
 struct infotypePakaian {
     string jenis;
@@ -40,12 +41,15 @@ struct elmList_Pakaian {
     addressLaundry prev;
 };
 
+
 //Basic Function & Procedure Customer
 void createListCustomer(ListCustomer &LC);
 addressCustomer createElmCustomer(string nama, string alamat, string idCustomer, string noTelp);
 bool isEmptyCustomer (ListCustomer LC);
 
-void inisialisasi_data(ListCustomer &LC);
+void inisialisasi_10data(ListCustomer &LC);
+void inisialisasi_25data(ListCustomer &LC);
+void inisialisasi_50data(ListCustomer &LC);
 
 void insertFirst_Customer(ListCustomer &LC, addressCustomer P);
 void insertLast_Customer(ListCustomer &LC, addressCustomer P);
@@ -84,8 +88,15 @@ int countHargaLaundry(addressCustomer P);
 
 
 //main_admin.cpp
-void menu_customer();
-void menu_laundry();
+void menu_customer(ListCustomer &LC);
+void menu_addFirstCustomer(ListCustomer &LC);
+void menu_addLastCustomer(ListCustomer &LC);
+
+void menu_laundry(ListCustomer &LC);
+void menu_addFirstLaundry(ListCustomer &LC);
+void menu_addLastLaundry(ListCustomer &LC);
+void menu_deleteFirstLaundry(ListCustomer &LC);
+void menu_deleteLastLaundry(ListCustomer &LC);
 
 
 //main_user,cpp
@@ -106,7 +117,7 @@ void menu_showCustomerLaundry(ListCustomer LC);
 
 
 //main.cpp
-void menu_admin();
-void menu_user();
+void menu_admin(ListCustomer &LC);
+void menu_user(ListCustomer &LC);
 
 #endif // HEADER_H_INCLUDED

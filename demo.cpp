@@ -3,7 +3,415 @@
 
 using namespace std;
 
-void inisialisasi_data(ListCustomer &LC) {
+void inisialisasi_10data(ListCustomer &LC) {
+addressCustomer P;
+addressLaundry Q;
+createListCustomer(LC);
+
+// Customer 1
+P = createElmCustomer("Nana","Jl_Anggrek_No_1","QAZ","088975238101");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_B",420);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",300); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",950);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",260);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",500);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",880); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",610);   insertLast_Pakaian(P,Q);
+
+
+// Customer 2
+P = createElmCustomer("Rina","Jl_Melati_No_2","WSX","088975238102");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Jaket","Paket_A",700);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",920);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_B",480); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",230);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",560);   insertLast_Pakaian(P,Q);
+
+
+// Customer 3
+P = createElmCustomer("Dewi","Jl_Mawar_No_3","EDC","088975238103");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_A",300);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",870); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",640);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",210);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",550);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",400); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",990);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",780);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",340);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",460);   insertLast_Pakaian(P,Q);
+
+
+// Customer 4
+P = createElmCustomer("Sari","Jl_Kenanga_No_4","RFV","088975238104");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Jaket","Paket_B",680);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",320);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",890); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",240);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",570);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",940);  insertLast_Pakaian(P,Q);
+
+
+// Customer 5
+P = createElmCustomer("Ayu","Jl_Flamboyan_No_5","TGB","088975238105");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Rok","Paket_B",360);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",410);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",820); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",690);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",910);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",270);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_B",540); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",330);   insertLast_Pakaian(P,Q);
+
+
+// Customer 6
+P = createElmCustomer("Lina","Jl_Dahlia_No_6","YHN","088975238106");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_C",870);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",390); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",720);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",210);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",560);   insertLast_Pakaian(P,Q);
+
+// Customer 7
+P = createElmCustomer("Putri","Jl_Teratai_No_7","UJM","088975238107");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Celana","Paket_B",480); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",300);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",960);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",350);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",890);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",420); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",610);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",330);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",260);    insertLast_Pakaian(P,Q);
+
+
+// Customer 8
+P = createElmCustomer("Maya","Jl_Kamboja_No_8","IKL","088975238108");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Jaket","Paket_A",640);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",520);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",880); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",230);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",910);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",410); insertLast_Pakaian(P,Q);
+
+
+// Customer 9
+P = createElmCustomer("Indah","Jl_Sakura_No_9","OPM","088975238109");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_B",580);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",360); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",970);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",340);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",830);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_B",510); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",290);   insertLast_Pakaian(P,Q);
+
+// Customer 10
+P = createElmCustomer("Fitri","Jl_Cemara_No_10","LKI","088975238110");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Celana","Paket_A",470); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",560);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",920);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",220);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",340);   insertLast_Pakaian(P,Q);
+}
+
+void inisialisasi_25data(ListCustomer &LC) {
+addressCustomer P;
+addressLaundry Q;
+createListCustomer(LC);
+
+// Customer 1
+P = createElmCustomer("Nana","Jl_Anggrek_No_1","QAZ","088975238101");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_B",420);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",300); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",950);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",260);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",500);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",880); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",610);   insertLast_Pakaian(P,Q);
+
+
+// Customer 2
+P = createElmCustomer("Rina","Jl_Melati_No_2","WSX","088975238102");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Jaket","Paket_A",700);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",920);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_B",480); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",230);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",560);   insertLast_Pakaian(P,Q);
+
+
+// Customer 3
+P = createElmCustomer("Dewi","Jl_Mawar_No_3","EDC","088975238103");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_A",300);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",870); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",640);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",210);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",550);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",400); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",990);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",780);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",340);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",460);   insertLast_Pakaian(P,Q);
+
+
+// Customer 4
+P = createElmCustomer("Sari","Jl_Kenanga_No_4","RFV","088975238104");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Jaket","Paket_B",680);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",320);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",890); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",240);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",570);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",940);  insertLast_Pakaian(P,Q);
+
+
+// Customer 5
+P = createElmCustomer("Ayu","Jl_Flamboyan_No_5","TGB","088975238105");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Rok","Paket_B",360);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",410);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",820); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",690);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",910);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",270);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_B",540); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",330);   insertLast_Pakaian(P,Q);
+
+
+// Customer 6
+P = createElmCustomer("Lina","Jl_Dahlia_No_6","YHN","088975238106");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_C",870);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",390); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",720);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",210);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",560);   insertLast_Pakaian(P,Q);
+
+// Customer 7
+P = createElmCustomer("Putri","Jl_Teratai_No_7","UJM","088975238107");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Celana","Paket_B",480); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",300);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",960);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",350);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",890);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",420); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_B",610);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",330);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",260);    insertLast_Pakaian(P,Q);
+
+
+// Customer 8
+P = createElmCustomer("Maya","Jl_Kamboja_No_8","IKL","088975238108");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Jaket","Paket_A",640);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",520);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_C",880); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",230);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",910);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",410); insertLast_Pakaian(P,Q);
+
+
+// Customer 9
+P = createElmCustomer("Indah","Jl_Sakura_No_9","OPM","088975238109");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Baju","Paket_B",580);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_A",360); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",970);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_B",340);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_C",830);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Celana","Paket_B",510); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",290);   insertLast_Pakaian(P,Q);
+
+// Customer 10
+P = createElmCustomer("Fitri","Jl_Cemara_No_10","LKI","088975238110");
+insertLast_Customer(LC,P);
+
+Q = createElmPakaian("Celana","Paket_A",470); insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_B",560);   insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Jaket","Paket_C",920);  insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Rok","Paket_A",220);    insertLast_Pakaian(P,Q);
+Q = createElmPakaian("Baju","Paket_A",340);   insertLast_Pakaian(P,Q);
+
+// Customer 11
+P = createElmCustomer("Novi","Jl_Pinus_No_11","MJU","088975238111");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_B",560);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",420);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",930);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_B",310);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",480);insertLast_Pakaian(P,Q);
+
+// Customer 12
+P = createElmCustomer("Wulan","Jl_Akasia_No_12","NHY","088975238112");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Jaket","Paket_B",700);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",880);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",390);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",610);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",260);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",940);insertLast_Pakaian(P,Q);
+
+// Customer 13
+P = createElmCustomer("Citra","Jl_Palem_No_13","BGT","088975238113");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Rok","Paket_A",220);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",540);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_C",860);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_B",650);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",400);insertLast_Pakaian(P,Q);
+
+// Customer 14
+P = createElmCustomer("Tika","Jl_Nangka_No_14","VFR","088975238114");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_C",790);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",360);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_B",680);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",240);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",520);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",910);insertLast_Pakaian(P,Q);
+
+// Customer 15
+P = createElmCustomer("Rosi","Jl_Mangga_No_15","CDE","088975238115");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Celana","Paket_C",870);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",420);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_B",630);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",210);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",560);insertLast_Pakaian(P,Q);
+
+// Customer 16
+P = createElmCustomer("Mega","Jl_Durian_No_16","JKL","088975238116");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_A",300);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_B",470);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",950);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",580);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",250);insertLast_Pakaian(P,Q);
+
+// Customer 17
+P = createElmCustomer("Yuni","Jl_Salak_No_17","ZXC","088975238117");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Jaket","Paket_B",710);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",890);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",360);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",440);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_B",330);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",960);insertLast_Pakaian(P,Q);
+
+// Customer 18
+P = createElmCustomer("Rara","Jl_Rambutan_No_18","ASD","088975238118");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_B",590);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_C",820);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_A",640);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",270);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",910);insertLast_Pakaian(P,Q);
+
+// Customer 19
+P = createElmCustomer("Nisa","Jl_Duku_No_19","FGH","088975238119");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Celana","Paket_A",430);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",560);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",940);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",240);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",880);insertLast_Pakaian(P,Q);
+
+// Customer 20
+P = createElmCustomer("Anisa","Jl_Jambu_No_20","BNM","088975238120");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_A",410);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_B",520);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",970);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",230);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",600);insertLast_Pakaian(P,Q);
+
+// Customer 21
+P = createElmCustomer("Dina","Jl_Sawo_No_21","QWE","088975238121");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_B",560);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",980);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",420);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_B",310);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",390);insertLast_Pakaian(P,Q);
+
+
+// Customer 22
+P=createElmCustomer("Siska","Jl_Kiwi_No_22","RTY","088975238122");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Rok","Paket_A",220);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",830);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_B",500);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",360);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_B",640);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",910);insertLast_Pakaian(P,Q);
+
+
+// Customer 23
+P=createElmCustomer("Reni","Jl_Apel_No_23","UIO","088975238123");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_A",310);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_C",870);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_B",330);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_A",580);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_B",540);insertLast_Pakaian(P,Q);
+
+
+// Customer 24
+P=createElmCustomer("Vina","Jl_Pir_No_24","PAS","088975238124");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Celana","Paket_B",520);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_C",760);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",990);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_A",260);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",340);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",410);insertLast_Pakaian(P,Q);
+
+// Customer 25
+P=createElmCustomer("Santi","Jl_Lemon_No_25","DFG","088975238125");
+insertLast_Customer(LC,P);
+Q=createElmPakaian("Baju","Paket_B",560);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Celana","Paket_A",430);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Rok","Paket_B",300);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Jaket","Paket_C",920);insertLast_Pakaian(P,Q);
+Q=createElmPakaian("Baju","Paket_A",350);insertLast_Pakaian(P,Q);
+
+}
+
+
+void inisialisasi_50data(ListCustomer &LC) {
+
 addressCustomer P;
 addressLaundry Q;
 createListCustomer(LC);
