@@ -75,14 +75,12 @@ void menu_customer(ListCustomer &LC) {
             case 1:
                 menu_addFirstCustomer(LC);
                 cout << endl;
-                cout << "Add First Customer Berhasil!";
                 cout << endl;
                 break;
 
             case 2:
                 menu_addLastCustomer(LC);
                 cout << endl;
-                cout << "Add Last Customer Berhasil!";
                 cout << endl;
                 break;
 
@@ -131,28 +129,24 @@ void menu_laundry(ListCustomer &LC) {
             case 1 : {
                 menu_addFirstLaundry(LC);
                 cout << endl;
-                cout << "Add First Laundry Berhasil!";
                 cout << endl;
                 break;
             }
             case 2:{
                 menu_addLastLaundry(LC);
                 cout << endl;
-                cout << "Add Last Laundry Berhasil!";
                 cout << endl;
                 break;
             }
             case 3:{
                 menu_deleteFirstLaundry(LC);
                 cout << endl;
-                cout << "Delete First Laundry Berhasil!";
                 cout << endl;
                 break;
             }
             case 4:{
                 menu_deleteLastLaundry(LC);
                 cout << endl;
-                cout << "Delete Last Laundry Berhasil!";
                 cout << endl;
                 break;
             }
@@ -200,6 +194,7 @@ void menu_addFirstCustomer(ListCustomer &LC){
 
     p = createElmCustomer(nama, alamat, idCustomer, noTelp);
     insertFirst_Customer(LC, p);
+    cout << "Add First Customer Berhasil!";
 }
 
 void menu_addLastCustomer(ListCustomer &LC){
@@ -221,6 +216,7 @@ void menu_addLastCustomer(ListCustomer &LC){
 
     p = createElmCustomer(nama, alamat, idCustomer, noTelp);
     insertLast_Customer(LC, p);
+    cout << "Add Last Customer Berhasil!";
 }
 
 
@@ -233,6 +229,10 @@ void menu_addFirstLaundry(ListCustomer &LC){
     cout << "Masukkan Nama Customer : ";
     cin >> cusName;
     p = search_Customer(LC, cusName);
+
+        if (p == nullptr) {
+            return;
+        } else {
 
     cout << "Masukkan Jenis Laundry : ";
     cin >> laundryName;
@@ -263,6 +263,8 @@ void menu_addFirstLaundry(ListCustomer &LC){
 
     q = createElmPakaian(laundryName, layanan, beratLaundry);
     insertFirst_Pakaian(p, q);
+    cout << "Add Last Customer Berhasil!";
+    }
 }
 
 void menu_addLastLaundry(ListCustomer &LC){
@@ -273,6 +275,10 @@ void menu_addLastLaundry(ListCustomer &LC){
     cout << "Masukkan Nama Customer : ";
     cin >> cusName;
     p = search_Customer(LC, cusName);
+
+        if (p == nullptr) {
+            return;
+        } else {
 
     cout << "Masukkan Jenis Laundry : ";
     cin >> laundryName;
@@ -303,7 +309,8 @@ void menu_addLastLaundry(ListCustomer &LC){
 
     q = createElmPakaian(laundryName, layanan, beratLaundry);
     insertLast_Pakaian(p, q);
-
+    cout << "Add Last Laundry Berhasil!";
+    }
 }
 
 void menu_deleteFirstLaundry(ListCustomer &LC){
@@ -313,10 +320,17 @@ void menu_deleteFirstLaundry(ListCustomer &LC){
     cout << "Masukkan Nama Customer : ";
     cin >> cusName;
     p = search_Customer(LC, cusName);
+
+        if (p == nullptr) {
+            cout << "Customer tidak ada!";
+            return;
+        }
+
     cout << endl;
     cout << endl;
 
     deleteFirst_Pakaian(p, q);
+    cout << "Delete First Laundry Berhasil!";
 
 }
 
@@ -327,11 +341,17 @@ void menu_deleteLastLaundry(ListCustomer &LC){
     cout << "Masukkan Nama Customer : ";
     cin >> cusName;
     p = search_Customer(LC, cusName);
+
+        if (p == nullptr) {
+            cout << "Customer tidak ada!";
+            return;
+        }
+
     cout << endl;
     cout << endl;
 
     deleteLast_Pakaian(p, q);
-
+    cout << "Delete Last Laundry Berhasil!";
 }
 //I said god help me
 

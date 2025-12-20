@@ -18,7 +18,8 @@ int main () {
         cout << "2. User" << endl;
         cout << "3. Inisialisasi 10 Data" << endl;
         cout << "4. Inisialisasi 25 Data" << endl;
-        cout << "5. Inisialisasi 50 Data" << endl;
+        cout << "5. Inisialisasi Seluruh Data (50 Data)" << endl;
+        cout << "6. Tampilkan seluruh data" << endl;
         cout << "0. Exit" << endl;
         cout << "=========================================================================" << endl;
         cout << "Pilih : ";
@@ -58,6 +59,19 @@ int main () {
         case 5 :
             inisialisasi_50data(LC);
             cout << "Inisialisasi 50 Data Berhasil!";
+            cout << endl;
+            cout << endl;
+            break;
+
+        case 6 :
+            menu_showAllData(LC);
+
+            if (LC.first == nullptr) {
+                cout << "List kosong!" << endl;
+                cout << endl;
+                break;
+            }
+
             cout << endl;
             cout << endl;
             break;
